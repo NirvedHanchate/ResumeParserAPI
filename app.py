@@ -8,7 +8,7 @@ app = FastAPI(docs_url="/docs")
 
 @app.get("/")
 def home():
-    return {"message": "Resume Parser API is up!"}
+    return {"message": "Resume Parser API is running!"}
 
 @app.post("/upload/")
 async def upload_resume(file: UploadFile = File(...), mode: str = Form("Digital")):
@@ -25,3 +25,5 @@ async def upload_resume(file: UploadFile = File(...), mode: str = Form("Digital"
     
     os.remove(file_location)
     return parsed_data
+
+
