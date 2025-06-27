@@ -49,12 +49,12 @@ def extract_experience(text):
 # ------------------- EXTRACT UNIVERSITIES -------------------
 def extract_universities(text):
     university_patterns = [
-        r'\b[A-Z][a-zA-Z&.\-\s]*University\b',
-        r'\bUniversity of [A-Z][a-zA-Z&.\-\s]*\b',
-        r'\b[A-Z][a-zA-Z&.\-\s]*Institute of Technology\b',
-        r'\b[A-Z][a-zA-Z&.\-\s]*College\b',
-        r'\bNational Institute of [A-Z][a-zA-Z&.\-\s]*\b',
-        r'\bIndian Institute of [A-Z][a-zA-Z&.\-\s]*\b'
+         r'(Bachelor of [\w\s]+ from [A-Z][a-zA-Z&.\-\s]*University)',
+        r'(Master of [\w\s]+ from [A-Z][a-zA-Z&.\-\s]*University)',
+        r'(Bachelor of [\w\s]+ from [A-Z][a-zA-Z&.\-\s]*College)',
+        r'(Master of [\w\s]+ from [A-Z][a-zA-Z&.\-\s]*College)',
+        r'(B\.?E\.? in [\w\s]+ from [A-Z][a-zA-Z&.\-\s]*University)',
+        r'(M\.?E\.? in [\w\s]+ from [A-Z][a-zA-Z&.\-\s]*University)'
     ]
 
     matches = []
